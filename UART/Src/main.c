@@ -80,7 +80,7 @@ int main(void)
   while (1)
   {
 		HAL_ADC_Start(&hadc);
-		
+		HAL_ADC_PollForConversion(&hadc, 100);
 //		if (HAL_ADC_PollForConversion(&hadc, 10) != HAL_OK)
 //    {
 //      /* End Of Conversion flag not set on time */
@@ -95,6 +95,8 @@ int main(void)
 		
 		
 		AD_Value = HAL_ADC_GetValue(&hadc);
+		//HAL_ADC_Stop(&hadc);
+		
 		//HAL_ADC_PollForConversion(&hadc, 100);
 		
 		//if(HAL_IS_BIT_SET(HAL_ADC_GetState(&hadc), HAL_ADC_STATE_REG_EOC)) {
