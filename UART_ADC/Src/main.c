@@ -2,6 +2,8 @@
 #include "main.h"
 #include "stm32f0xx_hal.h"
 
+#include "stdio.h"
+
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
@@ -24,7 +26,7 @@ static void MX_ADC_Init(void);
 
 
 
-/* USER CODE BEGIN 1 */
+
 #ifdef __GNUC__
   /* With GCC/RAISONANCE, small printf (option LD Linker->Libraries->Small printf
      set to 'Yes') calls __io_putchar() */
@@ -32,6 +34,7 @@ static void MX_ADC_Init(void);
 #else
   #define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
 #endif /* __GNUC__ */
+	
 /**
   * @brief  Retargets the C library printf function to the USART.
   * @param  None
@@ -47,14 +50,22 @@ PUTCHAR_PROTOTYPE
 }
 /* USER CODE END 1 */
 
-uint8_t status[] = "test..\n";
+
+
+//uint8_t status[] = "test..\n";
+
 __IO uint16_t AD_Value = 0;
+float float_AD;
 
-#define u16 uint16_t;
+//#define u16 uint16_t;
+//uint8_t MyAdcData1[5] = ""; //ADC1?????
+//float ADC_ConvertedValueLocal ;
 
-uint8_t MyAdcData1[5] = ""; //ADC1?????
+//float test1 = 3.54;
+//char num_char[4];
+//uint8_t digi1, digi2, digi3;
 
-float ADC_ConvertedValueLocal ;
+
 
 int main(void)
 {
@@ -78,10 +89,20 @@ int main(void)
 		HAL_ADC_PollForConversion(&hadc, 100);
 		AD_Value = HAL_ADC_GetValue(&hadc);
 		HAL_ADC_Stop(&hadc);
-
+		float_AD = AD_Value * 3.3 / 4096;
 		printf("test ...");
-		printf("%.2f V \r\n", (  (float)AD_Value * 3300 / 4096) );
+		printf("%.2f V \r\n", float_AD );
+		
+//		sprintf(num_char, "%f", test1);
+//		digi1 = num_char[0];
+//		if (digi1 == '3'){
+//			HAL_UART_Transmit(&huart1, (uint8_t *)num_char, 5, 5000);
+//		}
+//		printf ("%i - \n", digi1);
+		
+	
 		HAL_Delay(1000);
+		
   }
 
 
@@ -154,14 +175,13 @@ static void MX_ADC_Init(void)
   hadc.Instance = ADC1;
 	
   hadc.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
-	hadc.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
-	
+	//hadc.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
 	//hadc.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV1;
 	
   hadc.Init.Resolution = ADC_RESOLUTION_12B;
   hadc.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-  //hadc.Init.ScanConvMode = ADC_SCAN_DIRECTION_FORWARD;
-	hadc.Init.ScanConvMode = DISABLE;
+  hadc.Init.ScanConvMode = ADC_SCAN_DIRECTION_FORWARD;
+	//hadc.Init.ScanConvMode = DISABLE;
 	//hadc.Init.ScanConvMode = ADC_SCAN_DISABLE;
   hadc.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
 	//hadc.Init.EOCSelection = ADC_EOC_SEQ_CONV;
@@ -172,8 +192,8 @@ static void MX_ADC_Init(void)
   hadc.Init.DiscontinuousConvMode = DISABLE;
   hadc.Init.ExternalTrigConv = ADC_SOFTWARE_START;
   hadc.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
-  //hadc.Init.DMAContinuousRequests = DISABLE;
-  hadc.Init.DMAContinuousRequests = ENABLE;
+  hadc.Init.DMAContinuousRequests = DISABLE;
+  //hadc.Init.DMAContinuousRequests = ENABLE;
 	hadc.Init.Overrun = ADC_OVR_DATA_PRESERVED;
 	
   if (HAL_ADC_Init(&hadc) != HAL_OK)
@@ -181,10 +201,10 @@ static void MX_ADC_Init(void)
     _Error_Handler(__FILE__, __LINE__);
   }
 	
-  if (HAL_ADCEx_Calibration_Start(&hadc) != HAL_OK)
-  {
-    Error_Handler();
-  }
+//  if (HAL_ADCEx_Calibration_Start(&hadc) != HAL_OK)
+//  {
+//    Error_Handler();
+//  }
 	
     /**Configure for the selected ADC regular channel to be converted. 
     */
