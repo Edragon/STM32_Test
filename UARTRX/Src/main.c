@@ -122,6 +122,13 @@ int main(void)
 		//HAL_UART_Transmit(&huart1, (uint8_t *)buffer, 2, 100);
 		
 		//HAL_UART_Transmit(&huart1, (uint8_t *)"OK\n", 2, 100);
+
+//		if ( buffer[0] == 0x4F ) {
+//			HAL_UART_Transmit(&huart1, (uint8_t *)buffer, sizeof(buffer), 100); // send all buffer 10 bytes
+//			
+//			memset(buffer, 0, 10);
+//			HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, 1);
+//		}
 		
 		if (strcmp (buffer, "ON") == 0) {
 			HAL_UART_Transmit(&huart1, (uint8_t *)buffer, sizeof(buffer), 100); // send all buffer 10 bytes
@@ -139,10 +146,9 @@ int main(void)
 				
 			memset(buffer, 0, 10);
 			HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, 0);
-			//HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
-			//HAL_UART_Transmit(&huart1, (uint8_t *)buffer, 2, 100);
-			//HAL_UART_Transmit(&huart1, (uint8_t *)"OK\n", 3, HAL_MAX_DELAY);
 		}
+		
+		
 		
 		
 		//HAL_Delay(1000);
