@@ -1,0 +1,3 @@
+[submodule "stm32_mylib"]
+	path = stm32_mylib
+	url = https://e_dragon@bitbucket.org/e_dragon/stm32_mylib.git

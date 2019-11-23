@@ -1,0 +1,26 @@
+--cpu Cortex-M0
+"readpin\startup_stm32f030x6.o"
+"readpin\system_stm32f0xx.o"
+"readpin\stm32f0xx_it.o"
+"readpin\stm32f0xx_hal_msp.o"
+"readpin\main.o"
+"readpin\stm32f0xx_hal_gpio.o"
+"readpin\stm32f0xx_hal_dma.o"
+"readpin\stm32f0xx_hal_uart_ex.o"
+"readpin\stm32f0xx_hal_uart.o"
+"readpin\stm32f0xx_hal_cortex.o"
+"readpin\stm32f0xx_hal_flash.o"
+"readpin\stm32f0xx_hal_pwr_ex.o"
+"readpin\stm32f0xx_hal_tim_ex.o"
+"readpin\stm32f0xx_hal.o"
+"readpin\stm32f0xx_hal_i2c.o"
+"readpin\stm32f0xx_hal_flash_ex.o"
+"readpin\stm32f0xx_hal_i2c_ex.o"
+"readpin\stm32f0xx_hal_rcc_ex.o"
+"readpin\stm32f0xx_hal_tim.o"
+"readpin\stm32f0xx_hal_rcc.o"
+"readpin\stm32f0xx_hal_pwr.o"
+--library_type=microlib --strict --scatter "readpin\readpin.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "readpin.map" -o readpin\readpin.axf
