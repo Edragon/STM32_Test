@@ -53,6 +53,11 @@ UART_HandleTypeDef huart1;
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
 
+//uint32_t uwExpectedCRCValue = 0x379E9F06;
+
+
+//__IO uint32_t result = 0;
+//uint8_t k[6] = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06};
 
 /* USER CODE END PV */
 
@@ -65,7 +70,7 @@ static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
 
-uint8_t k[6] = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06};
+
 
 /* USER CODE END PFP */
 
@@ -136,7 +141,15 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-		crc_test (input);
+				
+				uint8_t result2 = crc_test (input2);	
+				//result = HAL_CRC_Accumulate(&hcrc, (uint32_t *)input2, 114);
+				//if (uwExpectedCRCValue == result ) {
+				//		printf("correct\n");
+				printf("%x", result2);
+				//}
+				
+				HAL_Delay(1000);
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
