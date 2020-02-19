@@ -1,0 +1,27 @@
+--cpu Cortex-M0
+"stm32f030-i2c-eeprom\startup_stm32f030x6.o"
+"stm32f030-i2c-eeprom\main.o"
+"stm32f030-i2c-eeprom\stm32f0xx_it.o"
+"stm32f030-i2c-eeprom\stm32f0xx_hal_msp.o"
+"stm32f030-i2c-eeprom\stm32f0xx_hal_i2c.o"
+"stm32f030-i2c-eeprom\stm32f0xx_hal_i2c_ex.o"
+"stm32f030-i2c-eeprom\stm32f0xx_hal_rcc.o"
+"stm32f030-i2c-eeprom\stm32f0xx_hal_rcc_ex.o"
+"stm32f030-i2c-eeprom\stm32f0xx_hal.o"
+"stm32f030-i2c-eeprom\stm32f0xx_hal_gpio.o"
+"stm32f030-i2c-eeprom\stm32f0xx_hal_dma.o"
+"stm32f030-i2c-eeprom\stm32f0xx_hal_cortex.o"
+"stm32f030-i2c-eeprom\stm32f0xx_hal_pwr.o"
+"stm32f030-i2c-eeprom\stm32f0xx_hal_pwr_ex.o"
+"stm32f030-i2c-eeprom\stm32f0xx_hal_flash.o"
+"stm32f030-i2c-eeprom\stm32f0xx_hal_flash_ex.o"
+"stm32f030-i2c-eeprom\stm32f0xx_hal_exti.o"
+"stm32f030-i2c-eeprom\stm32f0xx_hal_tim.o"
+"stm32f030-i2c-eeprom\stm32f0xx_hal_tim_ex.o"
+"stm32f030-i2c-eeprom\stm32f0xx_hal_uart.o"
+"stm32f030-i2c-eeprom\stm32f0xx_hal_uart_ex.o"
+"stm32f030-i2c-eeprom\system_stm32f0xx.o"
+--library_type=microlib --strict --scatter "STM32F030-I2C-EEPROM\STM32F030-I2C-EEPROM.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "STM32F030-I2C-EEPROM.map" -o STM32F030-I2C-EEPROM\STM32F030-I2C-EEPROM.axf
