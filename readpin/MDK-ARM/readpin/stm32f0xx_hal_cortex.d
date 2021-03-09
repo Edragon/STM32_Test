@@ -7,13 +7,13 @@ readpin\stm32f0xx_hal_cortex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ha
 readpin\stm32f0xx_hal_cortex.o: ../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h
 readpin\stm32f0xx_hal_cortex.o: ../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x6.h
 readpin\stm32f0xx_hal_cortex.o: ../Drivers/CMSIS/Include/core_cm0.h
-readpin\stm32f0xx_hal_cortex.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+readpin\stm32f0xx_hal_cortex.o: C:\MDKARM_v5\ARM\ARMCC\Bin\..\include\stdint.h
 readpin\stm32f0xx_hal_cortex.o: ../Drivers/CMSIS/Include/core_cmInstr.h
 readpin\stm32f0xx_hal_cortex.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 readpin\stm32f0xx_hal_cortex.o: ../Drivers/CMSIS/Include/core_cmFunc.h
 readpin\stm32f0xx_hal_cortex.o: ../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h
 readpin\stm32f0xx_hal_cortex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h
-readpin\stm32f0xx_hal_cortex.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+readpin\stm32f0xx_hal_cortex.o: C:\MDKARM_v5\ARM\ARMCC\Bin\..\include\stdio.h
 readpin\stm32f0xx_hal_cortex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h
 readpin\stm32f0xx_hal_cortex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h
 readpin\stm32f0xx_hal_cortex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio_ex.h

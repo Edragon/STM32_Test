@@ -2,7 +2,7 @@ readpin\system_stm32f0xx.o: ../Src/system_stm32f0xx.c
 readpin\system_stm32f0xx.o: ../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h
 readpin\system_stm32f0xx.o: ../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x6.h
 readpin\system_stm32f0xx.o: ../Drivers/CMSIS/Include/core_cm0.h
-readpin\system_stm32f0xx.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+readpin\system_stm32f0xx.o: C:\MDKARM_v5\ARM\ARMCC\Bin\..\include\stdint.h
 readpin\system_stm32f0xx.o: ../Drivers/CMSIS/Include/core_cmInstr.h
 readpin\system_stm32f0xx.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 readpin\system_stm32f0xx.o: ../Drivers/CMSIS/Include/core_cmFunc.h
@@ -13,7 +13,7 @@ readpin\system_stm32f0xx.o: ../Inc/main.h
 readpin\system_stm32f0xx.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h
 readpin\system_stm32f0xx.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h
 readpin\system_stm32f0xx.o: ../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h
-readpin\system_stm32f0xx.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+readpin\system_stm32f0xx.o: C:\MDKARM_v5\ARM\ARMCC\Bin\..\include\stdio.h
 readpin\system_stm32f0xx.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h
 readpin\system_stm32f0xx.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h
 readpin\system_stm32f0xx.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio_ex.h
