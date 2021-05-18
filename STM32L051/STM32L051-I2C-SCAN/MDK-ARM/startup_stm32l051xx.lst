@@ -344,12 +344,11 @@ ARM Macro Assembler    Page 6
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0+ --apcs=inter
 work --depend=ep_nfc\startup_stm32l051xx.d -oep_nfc\startup_stm32l051xx.o -I.\R
-TE\_EP_NFC -IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMS
-IS\Core\Include -IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L0xx
-_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32L0xx\Include --predefine="__MICROLIB SE
-TA 1" --predefine="__UVISION_VERSION SETA 533" --predefine="_RTE_ SETA 1" --pre
-define="STM32L051xx SETA 1" --predefine="_RTE_ SETA 1" --list=startup_stm32l051
-xx.lst startup_stm32l051xx.s
+TE\_EP_NFC -IC:\MDKARM_v5\ARM\PACK\ARM\CMSIS\5.7.0\CMSIS\Core\Include -IC:\MDKA
+RM_v5\ARM\PACK\Keil\STM32L0xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32L0xx\Inclu
+de --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 526" --p
+redefine="_RTE_ SETA 1" --predefine="STM32L051xx SETA 1" --list=startup_stm32l0
+51xx.lst startup_stm32l051xx.s
 
 
 
